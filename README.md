@@ -25,7 +25,7 @@ Make sure these packages are installed before running the script:
 ```r
 install.packages(c("xml2", "tidyverse", "openxlsx"))
 ```
-**Required files**
+## **Required files**
 
 To run the script, you need two files:
 
@@ -41,7 +41,7 @@ Column 3: label for each modality (libelle_modalite)
 XML file with the variable names (output from Nada or Nesstar)
 (e.g., data/input.xml)
 
-**Loading the function**
+## **Loading the function**
 
 The function inject_modalities is defined inside the script.
 Before running it, you need to source the script in your R session:
@@ -58,7 +58,7 @@ inject_modalities(
 )
 ```
 
-**Arguments**
+## **Arguments**
 
 xml_path: path to the input XML file (data/input.xml)
 
@@ -69,11 +69,11 @@ output_xml_path: path to the output XML file (data/output.xml)
 
 This will inject the modalities from the Excel file into the XML file and generate the updated XML.
 
-**Zenodo DOI**
+## **Zenodo DOI**
 
 This script is archived and citable via Zenodo:
 
-**Citation**
+## **Citation**
 
 Alena Lapatniova. (2025). inject_modalities (Version v1.1) [Computer software]. Zenodo. https://doi.org/10.5281/zenodo.17752420
 
