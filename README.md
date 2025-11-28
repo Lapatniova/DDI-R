@@ -25,9 +25,10 @@ excel_path : path to the Excel file containing the modalities
 output_xml_path : path to the output XML file
 
 Example usage:
-```r
+
 inject_modalities(
-  xml_path = "path/to/input.xml",
-  excel_path = "path/to/modalities.xlsx",
-  output_xml_path = "path/to/output.xml"
+  xml_path = "data/input.xml",
+  excel_path = "data/modalities.xlsx",
+  output_xml_path = "data/output.xml"
 )
+
