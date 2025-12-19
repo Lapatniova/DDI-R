@@ -78,7 +78,9 @@ This script is archived and citable via Zenodo:
 Alena Lapatniova. (2025). inject_categories (Version v1.1) [Computer software]. Zenodo. https://doi.org/10.5281/zenodo.17752420
 
 
-## Insert DDI universe metadata from Excel
+
+
+# Insert DDI universe metadata from Excel
 
 ### Description
 
