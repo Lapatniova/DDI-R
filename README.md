@@ -78,3 +78,54 @@ This script is archived and citable via Zenodo:
 Alena Lapatniova. (2025). inject_categories (Version v1.1) [Computer software]. Zenodo. https://doi.org/10.5281/zenodo.17752420
 
 
+## Insert DDI universe metadata from Excel
+
+### Description
+
+This script automates the insertion of **DDI `<universe>` metadata** at the variable level in a DDI XML file
+exported from **Nesstar** or **NADA**.
+
+It is designed to avoid manually filling the *Universe / Filter* field in Nesstar or NADA by using
+an external Excel mapping file.
+
+---
+
+### Input files
+
+#### 1. DDI XML file
+- Exported from Nesstar or NADA
+- Must already contain `<var>` elements with a `name` attribute
+- DDI Codebook format (DDI 2.x)
+
+#### 2. Excel mapping file
+The Excel file must contain exactly two columns:
+
+| Column name | Description |
+|------------|-------------|
+| `variable` | Variable name (must exactly match the XML) |
+| `universe` | Universe / filter text to insert |
+
+---
+
+### What the script does
+
+For each variable listed in the Excel file, the script:
+
+1. Checks if the variable exists in the XML
+2. Locates the corresponding `<var>` node
+3. Creates a `<universe>` tag if it does not exist
+4. Updates the `<universe>` content if it already exists
+5. Leaves all other metadata unchanged
+
+Variables not found in the XML are ignored.
+
+---
+
+### Output
+
+The script produces a new DDI XML file containing populated `<universe>` tags at the variable level.
+
+This XML file can be safely re-imported into Nesstar or NADA.
+
+
+
